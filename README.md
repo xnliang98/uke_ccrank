@@ -3,7 +3,7 @@ This is code for EMNLP 2021 paper: [Unsupervised Keyphrase Extraction by Jointly
 
 
 ## requirements
-- transformers
+- transformers==3.0.2
 - nltk
 - pytorch
 - tqdm
