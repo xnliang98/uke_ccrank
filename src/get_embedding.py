@@ -189,7 +189,7 @@ if __name__ == "__main__":
         help="data dir")
     parser.add_argument("--file_name", type=str, default="test.json",
         help="data name with json format")
-    parser.add_argument("--model_name", type=str, default="pretrained_models/bert-base-uncased")
+    parser.add_argument("--model_name", type=str, default="bert-base-uncased")
     # parser.add_argument("--model_type", type=str, default='bert')
 
     args = parser.parse_args()
