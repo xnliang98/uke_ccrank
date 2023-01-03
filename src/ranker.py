@@ -144,7 +144,7 @@ class DirectedCentralityRnak(object):
         cnt = 0
         for i in range(len(sentence_embeddings)-1):
             for j in range(i, len(sentence_embeddings)):
-                if type(sentence_embeddings[i]) == float or type(sentence_embeddings[i]) == np.float or type(sentence_embeddings[j]) == float or type(sentence_embeddings[j]) == np.float:
+                if type(sentence_embeddings[i]) == float or type(sentence_embeddings[j]) == float:
                     scores.append(0)
                 else:
                     scores.append(np.dot(sentence_embeddings[i], sentence_embeddings[j])) 
@@ -186,7 +186,7 @@ class DirectedCentralityRnak(object):
         new_matrix = similarity_matrix - threshold
         dist = []
         for emb in candidate_phrases_embeddings:
-            if type(doc_vector) == float or type(doc_vector) == np.float or type(emb) == float or type(emb) == np.float:
+            if type(doc_vector) == float or type(emb) == float:
                 dist.append(0)
             else:
                 dist.append(1/np.sum(np.abs(emb - doc_vector)))
